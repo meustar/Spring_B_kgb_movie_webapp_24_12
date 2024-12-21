@@ -35,7 +35,7 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'                              // Lombok 주석 처리
     testImplementation 'org.springframework.boot:spring-boot-starter-test'      // 테스트 라이브러리
     testImplementation 'org.springframework.security:spring-security-test'      // Spring Security 테스트
-    runtimeOnly 'com.h2database:h2'                                             // H2 데이터베이스 드라이버 (테스트 및 개발용)
+    runtimeOnly 'com.h2database:h2:2.2.224'                                     // H2 최신 버전 드라이버 (테스트 및 개발용)
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'                // JUnit 플랫폼 런처
 }
 
