@@ -24,18 +24,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'org.postgresql:postgresql'
-    annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'      // Spring Data JPA
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client' // OAuth 2.0 클라이언트
+    implementation 'org.springframework.boot:spring-boot-starter-security'      // Spring Security
+    implementation 'org.springframework.boot:spring-boot-starter-validation'    // Bean Validation
+    implementation 'org.springframework.boot:spring-boot-starter-web'           // Spring MVC 웹 애플리케이션
+    compileOnly 'org.projectlombok:lombok'                                      // Lombok을 컴파일 시만 포함
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'             // 개발 도구
+    runtimeOnly 'org.postgresql:postgresql'                                     // PostgreSQL 데이터베이스 드라이버
+    annotationProcessor 'org.projectlombok:lombok'                              // Lombok 주석 처리
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'      // 테스트 라이브러리
+    testImplementation 'org.springframework.security:spring-security-test'      // Spring Security 테스트
+    runtimeOnly 'com.h2database:h2'                                             // H2 데이터베이스 드라이버 (테스트 및 개발용)
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'                // JUnit 플랫폼 런처
 }
 
 tasks.named('test') {

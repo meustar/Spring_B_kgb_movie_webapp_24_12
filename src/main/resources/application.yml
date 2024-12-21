@@ -4,10 +4,6 @@ spring:
     username: postgre
     password: 1234
     driver-class-name: org.postgresql.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
   jpa:
     hibernate:
       ddl-auto: update # Hibernate의 DDL 자동 생성 모드 (update: 데이터베이스 스키마를 기존 데이터 유지하며 업데이트)
