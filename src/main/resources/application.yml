@@ -6,8 +6,10 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update # Hibernate의 DDL 자동 생성 모드 (update: 데이터베이스 스키마를 기존 데이터 유지하며 업데이트)
-    show-sql: true
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   security:
     oauth2:
       client:
