@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/movie_webapp
-    username: postgre
+    username: postgres
     password: 1234
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -15,8 +15,8 @@ spring:
       client:
         registration:
           google: # Google OAuth2 클라이언트 설정
-            client-id: [GOOGLE_CLIENT_ID] # Google 클라이언트 ID
-            client-secret: [GOOGLE_CLIENT_SECRET] # Google 클라이언트 시크릿
+            client-id: ${GOOGLE_CLIENT_ID} # Google 클라이언트 ID
+            client-secret: ${GOOGLE_CLIENT_SECRET} # Google 클라이언트 시크릿
             redirect-uri: "{baseUrl}/login/oauth2/code/google" # Google 인증 후 리디렉션 URL
             scope: email, profile # Google OAuth2 요청 범위 (email과 profile 정보 요청)
 #          naver: # Naver OAuth2 클라이언트 설정
