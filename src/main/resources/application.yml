@@ -1,4 +1,6 @@
 spring:
+  tmdb:
+    api-key: ${TMDB_API_KEY}
   datasource:
     url: jdbc:postgresql://localhost:5432/movie_webapp
     username: postgres
