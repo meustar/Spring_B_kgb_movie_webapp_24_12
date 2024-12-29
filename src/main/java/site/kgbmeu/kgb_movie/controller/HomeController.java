@@ -11,8 +11,16 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model, OAuth2User principal) {
         if (principal != null) {
-            model.addAttribute("name", principal.getAttribute("name"));
-            model.addAttribute("email", principal.getAttribute("email"));
+            // Principal 정보 유효성 체크 및 NPE 방지
+            String name = principal.getAttribute("name");
+            String email = principal.getAttribute("email");
+            if (name != null && email != null) {
+                model.addAttribute("name", name);
+                model.addAttribute("email", email);
+            } else {
+                model.addAttribute("name", "Guest");
+                model.addAttribute("email", "guest@example.com");
+            }
         }
         return "home";
     }
